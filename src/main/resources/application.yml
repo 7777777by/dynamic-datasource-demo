@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    default-db-key: mysql_dev
+    hikari:
+      data-sources:
+        - mysql:
+            dev:
+              driver-class-name: com.mysql.cj.jdbc.Driver
+              url: jdbc:mysql://192.168.31.77:3306/dev?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8
+              username: root
+              password: Abcd@1234
+            test:
+              driver-class-name: com.mysql.cj.jdbc.Driver
+              url: jdbc:mysql://192.168.31.78:3306/test?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8
+              username: root
+              password: Abcd@1234
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
